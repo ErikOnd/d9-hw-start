@@ -20,7 +20,7 @@ const Favourites = () => {
             {console.log(companies)}
             {companies.map(companie => {
                 return (
-                    <div className="d-flex justify-content-center align-items-center mb-4">
+                    <div className="d-flex justify-content-center align-items-center mb-4" key={companie._id}>
                         <div>
 
 
