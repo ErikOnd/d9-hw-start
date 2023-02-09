@@ -11,20 +11,18 @@ const Favourites = () => {
     const dispatch = useDispatch()
     return (
         <Container>
-            <Row className="justify-content-center mt-5 align-items-center"><h1>Favourite Companies</h1>
+            <Row className="justify-content-center mt-5 mb-5 align-items-center"><h1>Favourite Companies</h1>
                 <Link to="/" className="ml-3">
                     <Button variant="info"> Back to Companies</Button>
                 </Link>
             </Row>
-
-            {console.log(companies)}
             {companies.map(companie => {
                 return (
                     <div className="d-flex justify-content-center align-items-center mb-4" key={companie._id}>
-                        <div>
+                        <div className="fav-holder p-3">
 
 
-                            <a href={companie.url} className="mr-3">{companie.company_name}</a>
+                            <a href={companie.url} className="mr-3">{companie.company_name}</a><span className="mr-3">Title: {companie.title}</span>
                             <Button variant="danger" className='' onClick={() => {
                                 dispatch({
                                     type: 'REMOVE_FROM_FAV',
