@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import Job from './Job'
+import { Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 const MainSearch = () => {
   const [query, setQuery] = useState('')
@@ -33,6 +35,9 @@ const MainSearch = () => {
       <Row>
         <Col xs={10} className="mx-auto my-3">
           <h1>Remote Jobs Search</h1>
+          <Link to="/favourites">
+            <Button variant="info" className='add-favourite'> Show Favourites</Button>
+          </Link>
         </Col>
         <Col xs={10} className="mx-auto">
           <Form onSubmit={handleSubmit}>

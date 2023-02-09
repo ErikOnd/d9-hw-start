@@ -32,7 +32,23 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.add-favourite {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.company-holder {
+  position: relative;
+}
+
+.fav-holder {
+  border: 1px solid black;
 }
